@@ -15,6 +15,15 @@ describe('Routes', () => {
         .expect('Content-Type', /text\/html/, done)
     })
   })
+  describe('GET /public/:fileName route for serving up static files', () => {
+    it('it returns a file if :fileName is the name of a file (extension included) in public folder', done => {
+      app
+        .get('/public/styles.css')
+        .expect(200)
+        .expect('Content-Type', /text/, done)
+    })
+  })
+
   describe('GET /users', () => {
     it('it returns a JSON object', done => {
       app

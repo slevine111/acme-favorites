@@ -7,6 +7,7 @@ const { User, Thing } = require('../DataAccess/models/index')
 module.exports = app
 
 app.use(volleyball)
+app.use('/public', express.static(path.join(__dirname, '..', '..', 'public')))
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '..', '..', 'client', 'index.html'))
