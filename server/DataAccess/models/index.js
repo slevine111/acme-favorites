@@ -11,4 +11,12 @@ const setAssociations = () => {
   ])
 }
 
+User.getAllUsersFavoriteThings = () => {
+  return User.findAll({ include: { model: Favorite, include: Thing } })
+}
+
+Thing.getAllThingsFavoriteUsers = () => {
+  return Thing.findAll({ include: { model: Favorite, include: User } })
+}
+
 module.exports = { setAssociations, User, Thing, Favorite }
