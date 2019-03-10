@@ -8,7 +8,7 @@
     "start:dev": "npm run start-server & npm run build-watch",
     "start-server": "nodemon server/main.js --watch server -e js,html",
     "build-watch": "webpack -w",
-    "test": "./node_modules/mocha/bin/mocha ./tests/*.spec.js --watch"
+    "test": "./node_modules/mocha/bin/mocha './tests/**/*.spec.js' --watch --require babel-core/register"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
     "pg": "^7.8.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-router-dom": "^4.3.1",
     "sequelize": "^4.43.0",
     "volleyball": "^1.5.1"
   },

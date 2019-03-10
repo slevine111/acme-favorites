@@ -1,0 +1,22 @@
+body {
+  margin-left: 5%;
+}
+
+a {
+  text-decoration: none;
+  color: dodgerblue;
+  padding: 15px;
+}
+
+.active {
+  color: white;
+  background: dodgerblue;
+}
+
+a:not(.active):hover {
+  color: blue;
+}
+
+#leftnavlink {
+  margin-right: 20px;
+}
