@@ -1,2 +1,4 @@
 node_modules
 public/bundle.*
+coverage
+.nyc_output

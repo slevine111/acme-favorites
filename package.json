@@ -8,11 +8,15 @@
     "start:dev": "npm run start-server & npm run build-watch",
     "start-server": "nodemon server/main.js --watch server -e js,html",
     "build-watch": "webpack -w",
-    "test": "./node_modules/mocha/bin/mocha './tests/*.spec.js' --watch --require babel-core/register"
+    "test": "NODE_ENV=test nyc --reporter=html ./node_modules/mocha/bin/mocha './tests/*.spec.js' --watch --require babel-core/register"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "nyc": {
+    "sourceMap": false,
+    "instrument": false
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "express": "^4.16.4",
