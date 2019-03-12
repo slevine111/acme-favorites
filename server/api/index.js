@@ -13,13 +13,13 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '..', '..', 'client', 'index.html'))
 })
 
-app.get('/users', (req, res, next) => {
+app.get('/api/users', (req, res, next) => {
   User.getAllUsersFavoriteThings()
     .then(users => res.json(users))
     .catch(next)
 })
 
-app.get('/things', (req, res, next) => {
+app.get('/api/things', (req, res, next) => {
   Thing.getAllThingsFavoriteUsers()
     .then(things => res.json(things))
     .catch(next)

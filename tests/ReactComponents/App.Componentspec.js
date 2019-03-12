@@ -15,7 +15,7 @@ describe('App component', () => {
   before(() => {
     let mock = new MockAdapter(axios)
 
-    mock.onGet('/users').reply(200, [
+    mock.onGet('/api/users').reply(200, [
       {
         id: 4,
         username: 'larry',
@@ -80,7 +80,7 @@ describe('App component', () => {
       }
     ])
 
-    mock.onGet('/things').reply(200, [
+    mock.onGet('/api/things').reply(200, [
       {
         id: 4,
         name: 'bar',

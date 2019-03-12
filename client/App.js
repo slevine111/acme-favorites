@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    return Promise.all([axios.get('/users'), axios.get('/things')])
+    return Promise.all([axios.get('/api/users'), axios.get('/api/things')])
       .then(([users, things]) => {
         return {
           users: users.data,
