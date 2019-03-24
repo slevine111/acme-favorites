@@ -32,6 +32,7 @@ class App extends Component {
   }
 
   render() {
+    console.log('in render')
     return (
       <Router>
         <div>
